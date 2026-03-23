@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Google Gallery | Premium Image Grid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Logo Section - Top Left -->
+    
+
+    <div class="container">
+        <!-- Header with Google-style colored letters -->
+        <div class="header">
+            <h1>
+                <span class="letter-blue">P</span>
+                <span class="letter-red">r</span>
+                <span class="letter-yellow">o</span>
+                <span class="letter-blue">m</span>
+                <span class="letter-green">p</span>
+                <span class="letter-red">t</span>
+                <span class="letter-yellow">H</span>
+                <span class="letter-blue">u</span>
+                <span class="letter-green">b</span>
+            </h1>
+            <span style="display: flex; justify-content: center; align-items: center;">
+                <img class="zoom-img1" src="/images/mouse.svg" alt="Flip Card" >
+            <p style="margin-right: 30px;">Click on any image to reveal details & copy prompt</p>
+            </span>
+        </div>
+
+        <!-- Demo Section - Image Left, Text Right -->
+        <div class="demo-section">
+            <h2 class="demo-title"> Featured Demo Image</h2>
+            <div class="demo-container">
+                <div class="demo-image-wrapper" id="demoImageWrapper">
+                    <img src="/images/perfect_reference.png" alt="Demo Image" class="demo-image" id="demoImage">
+                    <div class="demo-overlay">
+                        <span class="zoom-icon"><img class="zoom-img" src="/images/mouse.svg" alt="Flip Card" ></span>
+                        <span>Click to Zoom</span>
+                    </div>
+                </div>
+                <div class="demo-content">
+                    <h3>Explore Powerful AI Prompts</h3>
+<p>Explore trending AI prompts and instantly upgrade your photos. From rain effects to fashion shoots, create stunning edits using Gemini with zero effort.</p>
+                    <ul class="demo-features">
+                        <li>
+                            <span><img src="/images/mouse.svg" alt="Flip Card" style="height: 40px; width: 40px;"></span>
+                            <span>Click to flip any card</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="demo-caption" >Click on the image to flip it and reveal prompt.</p>
+        </div>
+
+        <!-- Gallery Grid Container -->
+        <div class="gallery-header">
+            <h2><img src="/images/Google_Lens_Icon.svg" alt="Gallery" style="height: 45px; width: 45px; margin-right: 8px; vertical-align: middle;"> Gallery Collection</h2>
+            <p>Click any card to flip and reveal details</p>
+        </div>
+        
+        <div class="grid" id="imageGrid">
+            <div class="loading">Loading images...</div>
+        </div>
+    </div>
+
+    <!-- Zoom Modal for Demo Image -->
+    <div id="zoomModal" class="zoom-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="zoomedImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
