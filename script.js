@@ -200,7 +200,7 @@ function createFlipCard(imageData) {
 
 // Handle copy
 async function handleCopy(imageData, buttonElement) {
-    const textToCopy = imageData.description;
+    const textToCopy = imageData.copyText;
     
     try {
         await navigator.clipboard.writeText(textToCopy);
