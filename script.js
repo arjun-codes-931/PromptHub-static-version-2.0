@@ -205,9 +205,7 @@ async function handleCopy(imageData, buttonElement) {
     try {
         await navigator.clipboard.writeText(textToCopy);
         const originalIcon = buttonElement.innerHTML;
-        buttonElement.innerHTML = '✅';
         buttonElement.classList.add('copied');
-        showGoogleToast('Copied to clipboard!', 'success');
         
         setTimeout(() => {
             buttonElement.innerHTML = originalIcon;
@@ -216,8 +214,6 @@ async function handleCopy(imageData, buttonElement) {
     } catch (err) {
         console.error('Failed to copy:', err);
         const originalIcon = buttonElement.innerHTML;
-        buttonElement.innerHTML = '❌';
-        showGoogleToast('Failed to copy', 'error');
         
         setTimeout(() => {
             buttonElement.innerHTML = originalIcon;
